@@ -1,0 +1,7 @@
+{
+  "generator-phaser": {
+    "projectName": "blockblocks",
+    "esVersion": 6,
+    "gameFolder": "game"
+  }
+}
