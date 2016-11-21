@@ -14,9 +14,9 @@ class Game extends Phaser.State {
     this.background.width = this.game.world.width;
 
     // add cannon
-    this.cannon = this.game.add.sprite(this.game.world.width - (this.game.world.width / 6), this.game.world.height - (this.game.world.height / 12), 'cannon');
-    this.cannon.height = this.game.world.height / 12;
-    this.cannon.width = this.game.world.width / 6;
+    this.cannon = this.game.add.sprite(this.game.world.width - (this.game.world.width / 7), this.game.world.height - (this.game.world.height / 7), 'cannon');
+    this.cannon.height = this.game.world.height / 7;
+    this.cannon.width = this.game.world.width / 7;
 
     //setup UI
     this.countdownText = this.add.text(this.game.world.centerX, 0, '', {
@@ -34,6 +34,8 @@ class Game extends Phaser.State {
     this.crosshairs = new Crosshairs(this.game);
     this.target = new Target(this.game,this.game.world.centerX,this.game.world.centerY);
     this.game.add.existing(this.crosshairs);
+    this.game.add.existing(this.target);
+    this.game.add.existing(this.target);
     this.game.add.existing(this.target);
 
     //setup a timer to end the game
